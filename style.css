@@ -1,0 +1,57 @@
+.main-layout {
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+}
+
+.block {
+    width: 100%;
+    min-height: 600px;
+}
+
+.background--mimica {
+    background: url("images/pattern.png"), linear-gradient(to bottom, #fc5c34, #fc2a50) ;
+    background-size: cover;
+}
+
+.block__content {
+    width: 1200px;
+    margin: auto;
+}
+
+.block__left {
+    width: 50%;
+    float: left;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.color--white {
+    color: #FFFFFF;
+}
+
+.main-heading {
+    font-size: 55px;
+    line-height: 70px;
+    font-weight: bold;
+    padding: 10px 0 20px;
+}
+
+.main-description {
+    line-height: 30px;
+    padding-right: 100px;
+}
+
+.button {
+    background: none;
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.button--white {
+    background: white;
+    border-color: white;
+    color: #fe364f;
+}
