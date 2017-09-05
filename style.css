@@ -9,8 +9,11 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 32px;
+    padding-top: 32px;
+    padding-bottom: 15px;
     box-sizing: border-box;
+    transition: background-color 0.2s;
+    z-index: 10;
 }
 
 .menu__content {
@@ -29,7 +32,7 @@
 
 .menu__items li {
     display: inline-block;
-    padding: 20px 30px;
+    padding: 15px 30px;
     letter-spacing: 1px;
     word-spacing: 5px;
 }
@@ -45,8 +48,13 @@
 }
 
 .background--mimica {
-    background: url("images/pattern.png"), linear-gradient(to bottom, #fc5c34, #fc2a50) ;
+    background: url("images/pattern.svg"), linear-gradient(to bottom, #fc5c34, #fc2a50) ;
     background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.background--light-gray {
+    background-color: #fafafa;
 }
 
 .block__content {
@@ -106,20 +114,12 @@
     color: #fe3851;
 }
 
-.button--white::before {
-    content: url("images/red-arrow.png");
-    position: relative;
-    left: -10px;
-    top: 5px;
-}
-
 .button--transparent {
     background: transparent;
     color: white;
 }
 
-.button--transparent::before {
-    content: url("images/white-arrow.png");
+.button__image {
     position: relative;
     left: -10px;
     top: 5px;
@@ -135,6 +135,56 @@
     text-align: center;
 }
 
+.block--phone img {
+    width: 65%;
+}
+
 .clearer {
     clear: both;
+}
+
+.normal-padding {
+    padding: 50px 0;
+}
+
+.block__header {
+    padding: 0 32px;
+}
+
+h2.block-title {
+    font-size: 48px;
+    font-weight: 100;
+    display: inline-block;
+    padding: 32px 0;
+    color: #bdbdbd;
+}
+
+.project-item {
+    padding: 32px;
+}
+
+.project-item .project-item--icon {
+    position: relative;
+    max-width: 32px;
+    top: 5px;
+    left: -32px;
+    float: left;
+}
+
+.project-item .project-item--text {
+    padding: 0 32px;
+}
+
+.project-item .project-item--header {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #707185;
+}
+
+.project-item .project-item--content {
+    line-height: 20px;
+    color: #4a4a4a;
 }

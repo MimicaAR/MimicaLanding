@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Mimica</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,400" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
         <nav class="menu">
             <div class="menu__content">
                 <div class="menu__logo">
-                    <img src="images/MimicaLogo.png">
+                    <img src="images/logo.svg">
                 </div>
                 <ul class="menu__items color--white">
                     <li><a href="#">ГЛАВНАЯ</a></li>
@@ -32,8 +32,8 @@
                         Лицевая гимнастика нужна для поддержания тонуса лица и реабилитации сложных болезней. Например, лицевого паралича. Mimica помогает превратить  рутину в увлекательное занятие.
                     </p>
                     <div class="buttons">
-                        <button class="button button--white">One Pager</button>
-                        <button class="button button--transparent">Презентация</button>
+                        <button class="button button--white"><img src="images/red-arrow.svg" class="button__image">One Pager</button>
+                        <button class="button button--transparent"><img src="images/white-arrow.svg" class="button__image">Презентация</button>
                     </div>
                 </div>
                 <div class="block__right block--phone">
@@ -42,6 +42,43 @@
                 <div class="clearer"></div>
             </div>
         </div>
+        <div class="block background--light-gray">
+            <div class="block__content normal-padding">
+                <div class="block__header">
+                    <h2 class="block-title">О проекте</h2>
+                </div>
+                <div class="block__left">
+                    <div class="project-item">
+                        <img class="project-item--icon" src="images/play.svg">
+                        <div class="project-item--text">
+                            <span class="project-item--header">Лицевая гимнастика с элементами игры</span>
+                            <p class="project-item--content">
+                                MIMICA использует фронтальную камеру смартфона для обучения мимической гимнастике и предлагает интерактивные подсказки.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img class="project-item--icon" src="images/chat.svg">
+                        <div class="project-item--text">
+                            <span class="project-item--header">Консультации с врачом внутри приложения</span>
+                            <p class="project-item--content">
+                                С помощью приложения пациент получает ответы на интересующий его медицинские вопросы.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img class="project-item--icon" src="images/chart.svg">
+                        <div class="project-item--text">
+                            <span class="project-item--header">Индивидуальные тренировки и аналитика прогресса</span>
+                            <p class="project-item--content">
+                                Для лучшего прогресса  нужна регулярная и правильно подобранная  гимнастика лица.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
