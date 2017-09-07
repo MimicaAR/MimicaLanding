@@ -136,7 +136,8 @@
 }
 
 .block--phone img {
-    width: 65%;
+    /*width: 65%;*/
+    position: relative;
 }
 
 .clearer {

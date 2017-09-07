@@ -1,7 +1,7 @@
 /**
  * Created by chery on 05/09/2017.
  */
-//document.addEventListener('load', function () {
+window.addEventListener('load', function () {
     var menu = document.querySelector('.menu');
     document.addEventListener('scroll', function () {
         if (window.pageYOffset > 17) {
@@ -14,5 +14,50 @@
             menu.style.backgroundColor = 'transparent';
             menu.style.position = 'absolute';
         }
+    });
+
+    var phone = document.querySelector('.block--phone img');
+    var bodyRect = document.body.getBoundingClientRect(),
+        finalPos = document.querySelector('#project-items').offsetTop + document.querySelector('#project-items').clientHeight,
+        phoneRect = phone.getBoundingClientRect(),
+        offset   = phoneRect.top - bodyRect.top,
+        topPhone = offset - 85,
+        lastScrollPos = window.pageYOffset,
+        finished = false;
+
+    document.addEventListener('scroll', function () {
+        var finishRect = document.querySelector('#project-items').getBoundingClientRect(),
+            finish = finishRect.bottom - 1, // так надо
+            currentScrollPos = window.pageYOffset,
+            isScrollingDown = (currentScrollPos - lastScrollPos >= 0);
+        if (finished && !(isScrollingDown) && phone.getBoundingClientRect().top > 85) {
+            console.log(1);
+            phone.style.position = 'fixed';
+            phone.style.left = phoneRect.left + "px";
+            phone.style.top = "85px";
+            finished = false;
+        }
+        else if (finish < phone.getBoundingClientRect().bottom) {
+            console.log(2);
+            console.log(phoneRect.bottom);
+            phone.style.position = 'relative';
+            phone.style.left = 0;
+            phone.style.top = finalPos - phoneRect.bottom + 'px';
+            finished = true;
+        }
+        else if (currentScrollPos > topPhone && !(finished)) {
+            console.log(3);
+            phone.style.position = 'fixed';
+            phone.style.left = phoneRect.left + "px";
+            phone.style.top = "85px";
+        }
+        else {
+            phone.style.position = 'relative';
+            phone.style.left = 0;
+            phone.style.top = 0;
+        }
+
+        lastScrollPos = currentScrollPos;
+
     })
-//})
+})
