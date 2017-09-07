@@ -189,3 +189,27 @@ h2.block-title {
     line-height: 20px;
     color: #4a4a4a;
 }
+
+.block__platforms {
+    display: flex;
+}
+
+.platform {
+    flex: 1;
+    padding: 32px;
+    text-align: center;
+}
+
+.circle {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-color: white;
+    margin: auto;
+    box-shadow: #fc2a50 0 0 100px 0, rgba(252, 42, 80, 0.1) 0 0 0 15px inset;
+}
+
+.circle img {
+    width: 28%;
+    padding-top: 45px;
+}

@@ -16,7 +16,8 @@ window.addEventListener('load', function () {
         }
     });
 
-    var phone = document.querySelector('.block--phone img');
+    var phone = document.querySelector('.block--phone img'),
+        offsetTop = phone.offsetTop;
     var bodyRect = document.body.getBoundingClientRect(),
         finalPos = document.querySelector('#project-items').offsetTop + document.querySelector('#project-items').clientHeight,
         phoneRect = phone.getBoundingClientRect(),
@@ -24,6 +25,8 @@ window.addEventListener('load', function () {
         topPhone = offset - 85,
         lastScrollPos = window.pageYOffset,
         finished = false;
+
+    console.log(finalPos);
 
     document.addEventListener('scroll', function () {
         var finishRect = document.querySelector('#project-items').getBoundingClientRect(),
@@ -37,12 +40,13 @@ window.addEventListener('load', function () {
             phone.style.top = "85px";
             finished = false;
         }
-        else if (finish < phone.getBoundingClientRect().bottom) {
+        else if (finish < phone.getBoundingClientRect().bottom || window.pageYOffset >= finalPos - phone.clientHeight - 85) {
             console.log(2);
             console.log(phoneRect.bottom);
             phone.style.position = 'relative';
             phone.style.left = 0;
-            phone.style.top = finalPos - phoneRect.bottom + 'px';
+            phone.style.top = finalPos - phone.clientHeight - offsetTop + 'px';
+            console.log(finalPos - phone.clientHeight - 85 + 'px');
             finished = true;
         }
         else if (currentScrollPos > topPhone && !(finished)) {
