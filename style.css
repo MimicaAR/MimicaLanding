@@ -53,8 +53,22 @@
     background-blend-mode: overlay;
 }
 
+.background--white {
+    background-color: white;
+}
+
+.background--mimica-no-pattern {
+    background: linear-gradient(135deg, #fc5c34, #fc2a50);
+}
+
 .background--light-gray {
     background-color: #fafafa;
+}
+
+.background--team {
+    background: url("images/team_1.jpg");
+    background-size: 100%;
+    background-position-y: 100%;
 }
 
 .block__content {
@@ -128,11 +142,14 @@
 .block__right {
     float: left;
     width: 50%;
+    padding: 32px;
+    box-sizing: border-box;
 }
 
 .block--phone {
     height: 0;
     text-align: center;
+    padding: 0;
 }
 
 .block--phone img {
@@ -142,6 +159,7 @@
 
 .clearer {
     clear: both;
+    height: 0 !important;
 }
 
 .normal-padding {
@@ -192,7 +210,7 @@ h2.block-title {
 
 .block__platforms {
     display: flex;
-    padding-top: 64px;
+    padding: 64px 0;
 }
 
 .platform {
@@ -233,4 +251,163 @@ h2.block-title {
     padding-top: 20px;
     color: #4a4a4a;
     line-height: 1.5;
+}
+
+.card {
+    width: 90%;
+    margin: 130px auto;
+    height: 450px;
+    letter-spacing: 0.2px;
+}
+
+.card > div {
+    height: 100%;
+}
+
+.card .block__left {
+    border-radius: 20px 0 0 20px;
+}
+
+.card .block__right {
+    border-radius: 0 20px 20px 0;
+}
+
+.centered {
+    width: 60%;
+    margin: 10% auto 0 auto;
+    text-align: center;
+    height: 90%;
+    position: relative;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 35px 0;
+    display: inline-block;
+}
+
+.card .block__left .card-title {
+    color: #4a4a4a;
+}
+
+.card .block__left .positions li{
+    color: #a6a6a6;
+    padding: 10px 0;
+}
+
+.card .block__left .positions .position {
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+.card .block__right .card-title {
+    color: white;
+}
+
+.card .block__right .positions li{
+    color: white;
+    padding: 10px 0;
+}
+
+.card .post {
+    color: white;
+    font-size: 24px;
+    display: inline-block;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+}
+
+.news-block {
+    margin: 32px;
+    height: 300px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: black 0 0 40px -10px;
+    color: #707185;
+}
+
+.news-block > div {
+    height: 100%;
+}
+
+.news-block .block__left {
+    width: 40%;
+    padding: 0;
+    border-radius: 20px 0 0 20px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.news-block .block__left img.tall {
+    max-height: 100%;
+    width: auto;
+}
+
+.news-block .block__left img.wide {
+    max-width: 100%;
+    height: auto;
+}
+
+.news-block .block__right {
+    width: 60%;
+    border-radius: 0 20px 20px 0;
+    background-color: white;
+    padding-right: 50px;
+}
+
+.news-title {
+    font-size: 30px;
+    padding: 10px 0 30px 0;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.news-text {
+    line-height: 1.5;
+}
+
+@media (max-width: 1199px) {
+    .block__content {
+        width: 100%;
+    }
+    .menu__content {
+        width: 100%;
+    }
+    .block__left, .block__right {
+        width: 100%;
+        float: none;
+    }
+    .block--phone {
+        display: none;
+    }
+    .block__platforms {
+        flex-direction: column;
+    }
+    .card {
+        height: auto;
+        margin: auto;
+    }
+    .card > div {
+        height: 450px;
+    }
+    .card .block__left {
+        border-radius: 20px 20px 0 0;
+    }
+    .card .block__right {
+        border-radius: 0 0 20px 20px;
+    }
+    .card .post {
+        left: 15%;
+    }
+    .news-block .block__right, .news-block .block__left  {
+        float: left;
+    }
+    .news-block {
+        height: 350px;
+    }
+    .news-title {
+        font-size: 20px;
+    }
 }

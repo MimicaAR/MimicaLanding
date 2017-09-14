@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mimica</title>
+</head>
+<body>
+    <h1>Добавить новость</h1>
+    <div>
+        <form action="server/addNews.php" method="post" enctype="multipart/form-data">
+            <label>Заголовок: <input type="text" name="title" id="title"></label><br>
+            <label>Текст: <textarea cols="40" rows="10" name="text" id="text"></textarea></label><br>
+            <label>Ссылка: <input type="text" name="link" id="link"></label><br>
+            <label>Изображение: <input type="file" name="image" id="image"></label><br>
+            <input type="submit" value="Добавить" id="add" name="add">
+        </form>
+    </div>
+</body>
+</html>

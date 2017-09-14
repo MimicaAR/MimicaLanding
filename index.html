@@ -15,16 +15,15 @@
                     <img src="images/logo.svg">
                 </div>
                 <ul class="menu__items color--white">
-                    <li><a href="#">ГЛАВНАЯ</a></li>
-                    <li><a href="#">О ПРОЕКТЕ</a></li>
-                    <li><a href="#">КОМАНДА</a></li>
-                    <li><a href="#">СМИ</a></li>
-                    <li><a href="#">СВЯЗАТЬСЯ С НАМИ</a></li>
+                    <li><a href="#main">ГЛАВНАЯ</a></li>
+                    <li><a href="#projects">О ПРОЕКТЕ</a></li>
+                    <li><a href="#team">КОМАНДА</a></li>
+                    <li><a href="#news">СМИ</a></li>
                 </ul>
                 <div class="clearer"></div>
             </div>
         </nav>
-        <div class="block background--mimica">
+        <div class="block background--mimica" id="main">
             <div class="block__content first-block">
                 <div class="block__left block--description">
                     <h1 class="main-heading color--white">Помогаем людям улыбаться</h1>
@@ -32,7 +31,7 @@
                         Лицевая гимнастика нужна для поддержания тонуса лица и реабилитации сложных болезней. Например, лицевого паралича. Mimica помогает превратить  рутину в увлекательное занятие.
                     </p>
                     <div class="buttons">
-                        <button class="button button--white"><img src="images/red-arrow.svg" class="button__image">One Pager</button>
+                        <a href="https://www.talaka.org/projects/2140/fund"><button class="button button--white"><img src="images/red-arrow.svg" class="button__image">Поддержать</button></a>
                         <button class="button button--transparent"><img src="images/white-arrow.svg" class="button__image">Презентация</button>
                     </div>
                 </div>
@@ -42,7 +41,7 @@
                 <div class="clearer"></div>
             </div>
         </div>
-        <div class="block background--light-gray">
+        <div class="block background--light-gray" id="projects">
             <div class="block__content normal-padding">
                 <div class="block__header">
                     <h2 class="block-title">О проекте</h2>
@@ -114,6 +113,43 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="block background--team" id="team">
+            <div class="block__content normal-padding">
+                <div class="card">
+                    <div class="block__left background--white">
+                        <div class="centered">
+                            <span class="card-title">Наша команда: </span>
+                            <ul class="positions">
+                                <li><span class="position" >iOS Developer</span> Глеб Линник</li>
+                                <li><span class="position" >Web Developer</span> Евгений Качановский</li>
+                                <li><span class="position" >iOS Developer</span> Ян Хамутовский</li>
+                                <li><span class="position" >PM</span> Наталья Штанюк</li>
+                                <li><span class="position" >CEO</span> Халид Рустамов</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="block__right background--mimica-no-pattern">
+                        <div class="centered">
+                            <span class="card-title">Нам нужны: </span>
+                            <ul class="positions">
+                                <li>Business Analyst (1+ год опыта)</li>
+                                <li>Android Developer</li>
+                            </ul>
+                            <span class="post">mimica.post@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="clearer"></div>
+                </div>
+            </div>
+        </div>
+        <div class="block background--light-gray" id="news">
+            <div class="block__content normal-padding">
+                <div class="block__header">
+                    <h2 class="block-title">СМИ о нас</h2>
+                </div>
+
             </div>
         </div>
     </div>
